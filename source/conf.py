@@ -31,6 +31,9 @@ release = 'v1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "sphinx_design",
+    #makrdown支持
+    "myst_parser"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -54,9 +57,57 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'shibuya'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_logo = './_static/logo_white.png'
+html_favicon = './_static/logo_favicon.png'
+
+html_css_files = [
+  'custom.css',
+]
+html_theme_options = {
+    "accent_color": "blue",
+    "globaltoc_expand_depth": 1,
+    "github_url": "https://github.com/OpenSiFli",
+    "nav_links": [
+        {
+            "title": "用户指南",
+            "url": "docs/index",
+            "children": [
+                {
+                    "title": "SDK入门指南",
+                    "url": "sdk/index",
+                    "summary":"上手使用开发板和SDK",
+                },
+                {
+                    "title": "硬件设计指南",
+                    "url": "hardware/index",
+                    "summary":"硬件工程师设计板子需要注意的事项",
+                },
+                {
+                    "title": "选项指南",
+                    "url": "silicon/index",
+                    "summary":"芯片介绍和对比，方便选项",
+                },
+            ]
+        },
+        {
+            "title": "示例",
+            "url": "sdk/index",
+        },
+        {
+            "title": "API文档",
+            "url": "api/index",
+        },
+        {
+            "title": "关于我们",
+            "url": "about/index",
+        },
+    ],
+
+}

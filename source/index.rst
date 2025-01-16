@@ -1,20 +1,69 @@
-.. SiFli-Wiki documentation master file, created by
-   sphinx-quickstart on Wed Jan 15 16:39:09 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
-Welcome to SiFli-Wiki's documentation!
-======================================
+
+
+思澈科技
+=======
+
+.. rst-class:: lead
+
+    思澈科技是一家专注于物联网技术的公司，提供一站式的物联网解决方案。最先提出嵌入式MCU+GPU的物联网解决方案，为客户提供更高性能、更低功耗的物联网产品。
+
+.. container:: buttons
+
+    `Docs <docs/index.html>`_
+    `GitHub <https://github.com/OpenSiFli>`_
+
+.. grid:: 1 1 2 3
+    :gutter: 2
+    :padding: 0
+    :class-row: surface
+
+
+    .. grid-item-card:: :octicon:`zap` 学习路径
+        :link: docs/index.html
+
+        了解如何使用思澈科技的产品，快速上手。
+
+    .. grid-item-card:: :octicon:`beaker` 入门指南
+        :link: sdk/index.html
+
+        从头开始，上手使用，新老用户都适用。
+
+    .. grid-item-card:: :octicon:`browser` API说明
+        :link: api/index.html
+
+        详细的API文档，帮助你更好的使用。适合深入开发。
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+    :caption: 快速入门
+    :hidden:
+
+    docs/index
+    board/index
+
+.. toctree::
+    :caption: 软件开发
+    :hidden:
+
+    sdk/index
+    api/index
+
+.. toctree::
+    :caption: 硬件开发
+    :hidden:
+    :maxdepth: 2
+
+    silicon/index
+    hardware/index
+    
+
+.. toctree::
+    :caption: 产品介绍
+    :hidden:
+
+    about/index
 
 
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+
