@@ -38,7 +38,8 @@ jobs:
           sphinx-build -b html ./source ./build -E
           echo "生成静态网页完成"
           echo "发布到服务器"
-          python3 tools/uploaded.py $BUILD_CONFIG
+          mc alias set myminio $BUILD_CONFIG
+          mc cp --recursive ./build myminio/web/main
           echo "发布完成"
 
 
