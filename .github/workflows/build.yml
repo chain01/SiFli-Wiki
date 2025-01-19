@@ -44,8 +44,6 @@ jobs:
           mc cp --recursive ./build myminio/web/main
           echo "发布完成"
 
-
-
       # 打包build文件夹
       - name: Archive production artifacts
         run: |
