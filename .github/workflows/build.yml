@@ -38,9 +38,8 @@ jobs:
           sphinx-build -b html ./source ./build -E
           echo "生成静态网页完成"
           echo "发布到服务器"
-          curl https://github.com/chain01/SiFli-Wiki/releases/download/test/mc --create-dirs -o $HOME/minio-binaries/mc
-          chmod +x $HOME/minio-binaries/mc
-          export PATH=$PATH:$HOME/minio-binaries/
+          chmod +x ./tools/mc
+          export PATH=$PATH:$HOME/work/SiFli-Wiki/SiFli-Wiki/tools
           mc alias set myminio $BUILD_CONFIG
           mc cp --recursive ./build myminio/web/main
           echo "发布完成"
